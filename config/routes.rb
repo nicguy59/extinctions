@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'animals/show'
+
   resources :classifications do
     resources :animals
   end

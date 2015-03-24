@@ -5,11 +5,14 @@
       <% @animal.common_names.each do |a|%>
 
         <li> CommonName: <%= a.name %> </li>
-
       <% end %>
     <li><%= @animal.recent?? h("Recent") : h("Not Recent") %></li>
     <li><%= link_to("URL",@animal.url)%></li>
+     
+    <% if @animal.has_image %>
       <%= image_tag(@animal.image_url) %>
+    <% end %>
+
   </ul>
 
 <p><%= link_to("Back to the list of Classifications", classifications_path)%></p>
