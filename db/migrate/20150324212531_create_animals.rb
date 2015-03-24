@@ -10,6 +10,6 @@ class CreateAnimals < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_foreign_key :animals, :classification
+    #add_foreign_key :animals, :classification
   end
 end
