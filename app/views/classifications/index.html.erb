@@ -1,0 +1,9 @@
+<h1>Classifications</h1>
+
+<ul>
+  <% @classifications.each do |c| %>
+    <li><h2><%= link_to(c.name , classification_path(c)) %></h2></li>
+    <p><%="Quantity: "+c.animals.count.to_s%></p>
+  <% end %>
+
+</ul>
